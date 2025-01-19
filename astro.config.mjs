@@ -6,7 +6,14 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), svelte(), react()],
+integrations: [tailwind(), svelte({
+vitePlugin: {
+    exclude: [],
+    compilerOptions: {
+    dev: process.env.NODE_ENV !== 'production'
+    }
+}
+}), react()],
   output: 'server',
   adapter: deno(),
 });
