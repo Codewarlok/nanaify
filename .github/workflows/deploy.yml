@@ -38,7 +38,7 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "sweet-frog-39"
-          entrypoint: "https://jsr.io/@std/http/1.0.12/file_server.ts"
+          entrypoint: "server/entry.mjs"
           root: "dist"
           
           
